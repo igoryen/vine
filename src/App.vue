@@ -1,16 +1,21 @@
 <template>
-  <div id="app">
-
-  </div>
+    <div id="app">
+        {{epistle}}
+    </div>
 </template>
 
 <script>
 
 export default {
-  name: 'app',
-  components: {
+name: 'app',
+    components: {
 
-  }
+    },
+    data() {
+        return {
+            epistle: "Greetings!!!"
+        }
+    }
 }
 </script>
 
