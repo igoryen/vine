@@ -1,19 +1,37 @@
 <template>
     <div id="app">
-        {{epistle}}
+        <Points v-bind:list="list"/>
     </div>
 </template>
 
 <script>
 
-export default {
-name: 'app',
-    components: {
+import Points from './components/Todos';
 
+export default {
+    name: 'app',
+    components: {
+        Points
     },
     data() {
         return {
-            epistle: "Greetings!!!"
+            list: [
+                {
+                    id: 1,
+                    title: "Todo One",
+                    completed: false
+                },
+                {
+                    id: 2,
+                    title: "Todo Two",
+                    completed: false
+                },
+                {
+                    id: 3,
+                    title: "Todo Three",
+                    completed: false
+                }
+            ]
         }
     }
 }
