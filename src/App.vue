@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <Shapka />
-        <ItemAppender />
+        <ItemAppender v-on:add-item="aggregateItem"/>
         <Points v-bind:list="list" v-on:del-item="scrapItem"/>
     </div>
 </template>
@@ -44,6 +44,9 @@ export default {
     methods: {
         scrapItem( id ) {
             this.list = this.list.filter( item => item.id !== id);
+        },
+        aggregateItem( brandNewItem ) {
+            this.list = [...this.list, brandNewItem];
         }
     }
 }
