@@ -27,6 +27,7 @@ export default {
             }
             // Send it up to parent
             this.$emit('add-item', brandNewItem);
+            this.title = '';
         }
     }
 }
