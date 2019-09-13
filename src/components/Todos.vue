@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h1>My things to do</h1>
         <div v-bind:key="item.id" v-for="item in list">
             <!-- <h3>{{item.title}}</h3> -->
             <ListPoint v-bind:item="item" v-on:del-item="$emit('del-item', item.id)"/>

@@ -1,16 +1,19 @@
 <template>
     <div id="app">
+        <Shapka />
         <Points v-bind:list="list" v-on:del-item="scrapItem"/>
     </div>
 </template>
 
 <script>
 
+import Shapka from './components/layout/Header';
 import Points from './components/Todos';
 
 export default {
     name: 'app',
     components: {
+        Shapka,
         Points
     },
     data() {
