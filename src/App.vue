@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <Points v-bind:list="list"/>
+        <Points v-bind:list="list" v-on:del-item="scrapItem"/>
     </div>
 </template>
 
@@ -32,6 +32,11 @@ export default {
                     completed: false
                 }
             ]
+        }
+    },
+    methods: {
+        scrapItem( id ) {
+            this.list = this.list.filter( item => item.id !== id);
         }
     }
 }
