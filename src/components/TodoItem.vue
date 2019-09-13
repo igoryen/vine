@@ -1,5 +1,5 @@
 <template>
-    <div class="list-item">
+    <div class="list-item" v-bind:class="{'is-complete':item.completed}">
         <p>{{item.title}}</p>
     </div>
 </template>
