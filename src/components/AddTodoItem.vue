@@ -19,7 +19,7 @@ export default {
     methods: {
         aggregateItem( e ) {
             // method defined
-            e.preventDefault();
+            e.preventDefault(); // 1
             const brandNewItem = {
                 id: uuid.v4(),
                 title: this.title,
