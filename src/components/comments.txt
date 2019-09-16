@@ -1,1 +1,6 @@
 1. stop the default behavior, i.e. prevent the form from actually submitting to a file.
+2. a special method to make the initial request. It fires off when the component loads. It will run right away and this is where we want to make our request. It is used to make the http request.
+3. axios - the http api, an http library to enable us to make GET, POST etc. requests. This line is added after you have run `npm i axios`.
+4. this returns a promise.
+5. handle the returned promise. The response will have a value called 'data', i.e. response.data will have the array of objects.
+6. if error, display it in console.

@@ -11,6 +11,7 @@
 import Shapka from './components/layout/Header';
 import Points from './components/Todos';
 import ItemAppender from './components/AddTodoItem';
+import axios from 'axios'; // #3
 
 
 export default {
@@ -22,23 +23,7 @@ export default {
     },
     data() {
         return {
-            list: [
-                {
-                    id: 1,
-                    title: "Todo One",
-                    completed: false
-                },
-                {
-                    id: 2,
-                    title: "Todo Two",
-                    completed: false
-                },
-                {
-                    id: 3,
-                    title: "Todo Three",
-                    completed: false
-                }
-            ]
+            list: []
         }
     },
     methods: {
@@ -48,6 +33,11 @@ export default {
         aggregateItem( brandNewItem ) {
             this.list = [...this.list, brandNewItem];
         }
+    }, 
+    created() { // #2
+        axios.get('https://jsonplaceholder.typicode.com/todos') // #4
+        .then( response => this.list = response.data) // #5
+        .catch(err => console.log(err));// #6
     }
 }
 </script>
