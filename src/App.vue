@@ -1,12 +1,20 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+      <Shapka />
+
     <router-view/>
   </div>
 </template>
+
+<script>
+import Shapka from './components/layout/Header';
+export default {
+    name: "app",
+    components: {
+        Shapka
+    }
+}
+</script>
 
 <style>
     body {

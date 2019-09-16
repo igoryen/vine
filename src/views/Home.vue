@@ -1,6 +1,5 @@
 <template>
     <div id="app">
-        <Shapka />
         <ItemAppender v-on:add-item="aggregateItem"/>
         <Points v-bind:list="list" v-on:del-item="scrapItem"/>
     </div>
@@ -8,7 +7,6 @@
 
 <script>
 
-import Shapka from '../components/layout/Header';
 import Points from '../components/Todos';
 import ItemAppender from '../components/AddTodoItem';
 import axios from 'axios'; // #3
@@ -17,7 +15,6 @@ import axios from 'axios'; // #3
 export default {
     name: 'Home',
     components: {
-        Shapka,
         Points,
         ItemAppender
     },
