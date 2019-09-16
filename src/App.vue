@@ -31,7 +31,14 @@ export default {
             this.list = this.list.filter( item => item.id !== id);
         },
         aggregateItem( brandNewItem ) {
-            this.list = [...this.list, brandNewItem];
+            const { title, completed } = brandNewItem;// #8
+            axios.post('https://jsonplaceholder.typicode.com/todos', {// #13
+                title, // #10
+                completed // #11
+            })// #9
+            .then( response => this.list = [...this.list, response.data]) // #12
+            .catch(err => console.log(err));// #6
+            
         }
     }, 
     created() { // #2

@@ -4,3 +4,10 @@
 4. this returns a promise.
 5. handle the returned promise. The response will have a value called 'data', i.e. response.data will have the array of objects.
 6. if error, display it in console.
+7. returns a unique id
+8. destructuring to pull out the `title` and `completed`
+9. make a POST request
+10. sending parameter B: the 'title' (thanks to ES6, this is the same as `title: title`).
+11. sending parameter C: the 'completed' 
+12. handling the returned promise (like #5); the new item is added to the UI.
+13. when you post a new item, it returns the item and the id created by it.

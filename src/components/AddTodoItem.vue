@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import uuid from 'uuid';
+//import uuid from 'uuid';
 export default {
     name: "AppendItem",
     data() {
@@ -21,7 +21,7 @@ export default {
             // method defined
             e.preventDefault(); // #1
             const brandNewItem = {
-                id: uuid.v4(),
+                // id: uuid.v4(), // #7
                 title: this.title,
                 completed: false
             }
