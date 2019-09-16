@@ -28,7 +28,9 @@ export default {
     },
     methods: {
         scrapItem( id ) {
-            this.list = this.list.filter( item => item.id !== id);
+            axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`) // #14
+            .then( response => this.list = this.list.filter( item => item.id !== id)) // #15
+            .catch(err => console.log(err));// #6
         },
         aggregateItem( brandNewItem ) {
             const { title, completed } = brandNewItem;// #8

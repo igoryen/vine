@@ -11,3 +11,5 @@
 11. sending parameter C: the 'completed' 
 12. handling the returned promise (like #5); the new item is added to the UI.
 13. when you post a new item, it returns the item and the id created by it.
+14. make a DELETE request. Use backticks (`) so that you can use a variable
+15. delete an item from the UI, it gets to the server, then gets removed from the UI.
