@@ -8,14 +8,14 @@
 
 <script>
 
-import Shapka from './components/layout/Header';
-import Points from './components/Todos';
-import ItemAppender from './components/AddTodoItem';
+import Shapka from '../components/layout/Header';
+import Points from '../components/Todos';
+import ItemAppender from '../components/AddTodoItem';
 import axios from 'axios'; // #3
 
 
 export default {
-    name: 'app',
+    name: 'Home',
     components: {
         Shapka,
         Points,
