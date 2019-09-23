@@ -5,6 +5,9 @@
     <div id="pickle">
       <input type="text" v-on:input="changePhrase"> 
       <p>{{something}}</p>
+      <div>
+          <h1>{{ sayHello() }}</h1>
+      </div>
     </div>
   </div>
 </template>
@@ -20,7 +23,11 @@ export default {
     methods: {
         changePhrase: function( event ){
             this.something = event.target.value;
+        },
+        sayHello: function(){
+            return "Hello!";
         }
+        
     }
 }
 </script>
